@@ -95,7 +95,7 @@ header {
 }
 
 .logo img {
-  width: 25rem; /* Ajusta el tamaño del logo según tus necesidades */
+  width: 20rem; /* Ajusta el tamaño del logo según tus necesidades */
   height: auto; /* Mantiene la proporción de la imagen */
   padding: 1rem; /* Agrega un poco de espacio alrededor de la imagen */
   display: block; /* Asegura que la imagen se comporte como un bloque y no tenga espacio debajo */
@@ -217,9 +217,9 @@ footer .footer-list {
 }
 
 .card img {
-  width: 70%;
-  height: 20rem;
-  object-fit: contain;
+  width: 70%; /* Ajusta el ancho de la imagen al 70% del contenedor de la tarjeta */
+  height: 20rem; /* Ajusta la altura de la imagen a 20rem */
+  object-fit: contain; /* Mantiene la proporción de la imagen y evita que se deforme */
 }
 
 /*---------------------------------------------------- */
