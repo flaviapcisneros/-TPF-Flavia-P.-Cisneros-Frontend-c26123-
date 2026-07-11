@@ -66,7 +66,7 @@ header {
   flex-direction: row; /* 🌟 Asegura que vayan en línea horizontal */
   justify-content: space-between; /* 🌟 Manda el logo a la izquierda y el menú a la derecha */
   align-items: center;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
 }
 
 .div-logo {
@@ -97,7 +97,7 @@ header {
 .logo img {
   width: 25rem; /* Ajusta el tamaño del logo según tus necesidades */
   height: auto; /* Mantiene la proporción de la imagen */
-  padding: 1.5rem; /* Agrega un poco de espacio alrededor de la imagen */
+  padding: 1rem; /* Agrega un poco de espacio alrededor de la imagen */
   display: block; /* Asegura que la imagen se comporte como un bloque y no tenga espacio debajo */
 }
 
