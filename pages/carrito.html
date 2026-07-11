@@ -37,33 +37,24 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h1 class="titulo-contacto text-secondary">Dejanos tu mensaje</h1>
 
-      <form
-        class="form-contacto"
-        action="https://formspree.io/f/mjgllqdy"
-        method="POST"
-      >
-        <div class="grupo-input">
-          <label for="nombre"> Nombre: </label>
-          <input id="nombre" type="nombre" name="nombre" />
-        </div>
-        <div class="grupo-input">
-          <label for="email"> Email: </label>
-          <input id="email" type="email" name="email" />
-        </div>
-        <div class="grupo-input">
-          <label for="mensaje"> Tu mensaje: </label>
-          <textarea id="mensaje" name="message"></textarea>
-        </div>
-        <!-- your other form fields go here -->
-        <button class="btn" type="submit">Send</button>
-      </form>
+    <main>
+      <h1>Carrito de compras</h1>
+      <section id="contenedor-carrito" class="contenedor-tarjetas">
+        <!--Productos del carrito, lo genero y dejo a la espera del código de Js-->
+      </section>
+      <div id="acciones-carrito" class="acciones-carrito">
+        <!-- agrega los botones eliminar y finalizar compra se agregan desde Js, se agregan de Js porque no es necesario que estén siempre es dinámico y depende de si hay o no productos-->
+      </div>
+      <section id="resumen-carrito">
+        <!--esto es el resumen de los productos agregados, verlo en la clase de reduce-->
+      </section>
     </main>
+
     <footer>
       <p>Sitio realizado por Fla para Talento Tech y mi fotocopia de 9 años</p>
       <p>&copy; 2026 Mi E-Commerce</p>
+      <!-- &copy: sirve para mostrar el símbolo de derechos de autor o copyright (©) en una página web-->
       <nav>
         <ul class="footer-list">
           <li><img src="../img/instagram.png" alt="logo de instagram" /></li>
@@ -72,7 +63,7 @@
       </nav>
     </footer>
 
-    <!--agregamos el enlace al archivo de js (index): sin type module no funciona porque trabajamos en modulos, siempre antes del cierre del body -->
-    <script src="../js/index.js" type="module"></script>
+    <!--agregamos el enlace al archivo de js (carrito): sin type module no funciona porque trabajamos en modulos, siempre antes del cierre del body -->
+    <script src="../js/carrito.js" type="module"></script>
   </body>
 </html>

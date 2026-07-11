@@ -54,53 +54,101 @@ h2 {
   border-radius: 1rem;
 }
 
-header,
-footer {
+/* =================================================== */
+/*                     HEADER                          */
+/* =================================================== */
+
+header {
   background: #262626;
   color: #ffd900;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row; /* 🌟 Asegura que vayan en línea horizontal */
+  justify-content: space-between; /* 🌟 Manda el logo a la izquierda y el menú a la derecha */
   align-items: center;
   padding: 0.5rem 2rem;
 }
 
 .div-logo {
-  margin-left: 2rem;
-  font-weight: bold;
+  margin-left: 2rem; /* Agrega un poco de espacio a la izquierda del logo */
+  font-weight: bold; /* Hace que el logo se vea más fuerte y destacado */
 }
 
 .logo {
+  padding: 3rem 0; /* Agrega un poco de espacio arriba y abajo del logo */
+}
+
+.header-nav ul {
+  list-style: none; /* Quita los puntos de la lista */
+  display: flex; /* 🌟 Hace que los elementos de la lista se alineen horizontalmente */
+  flex-direction: row; /* 🌟 OBLIGA a Home, Contacto y Carrito a ponerse uno al lado del otro */
+  gap: 1.5rem; /* Espacio entre cada opción */
   padding: 0;
+  margin: 0;
 }
 
 .header-nav ul li a {
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-  padding: 1rem;
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  color: inherit; /* Hereda el color del header */
+  display: inline-block; /* Hace que el enlace sea un bloque en línea para poder aplicar padding */
+  padding: 1rem; /* Le da un poco de espacio alrededor del enlace para que sea más fácil de hacer clic */
 }
 
 .logo img {
-  width: 20rem;
-  height: auto;
-  display: block;
+  width: 25rem; /* Ajusta el tamaño del logo según tus necesidades */
+  height: auto; /* Mantiene la proporción de la imagen */
+  padding: 1.5rem; /* Agrega un poco de espacio alrededor de la imagen */
+  display: block; /* Asegura que la imagen se comporte como un bloque y no tenga espacio debajo */
 }
 
-.header-nav ul,
+/* =================================================== */
+/*                     FOOTER                          */
+/* =================================================== */
+
+footer {
+  background: #262626;
+  color: #ffd900;
+  width: 100%;
+  padding: 1.5rem 2rem; /* Más aire arriba y abajo */
+  display: grid; /* Columna 1 (Izq): se estira para el texto, Columna 2 (Der): mide lo que ocupen los íconos */
+  grid-template-columns: auto 1fr; /* Alinea verticalmente todo al centro */
+  align-items: center;
+  row-gap: 0.5rem; /* Espacio entre las filas de texto */
+  column-gap: 2rem;
+}
+
+footer nav {
+  grid-column: 2; /* Le dice que ocupe la columna 2 */
+  grid-row: 1 / span 2; /* Ocupa el alto de las dos filas de texto para quedarse al lado */
+  justify-self: end; /* Se pega a la derecha */
+}
+
+footer p {
+  grid-column: 1; /* Van a la columna 1 */
+  margin: 0;
+  font-size: 1.6rem;
+  justify-self: start; /*👈 ESTO MANDA EL BLOQUE A LA izquierda*/
+  text-align: left; /* Alinea los renglones sobre la izquierda */
+}
+
 footer .footer-list {
   list-style: none;
   display: flex;
+  flex-direction: row;
   gap: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-list li {
-  padding: 1rem;
+  padding: 0.2rem; /* Padding bajo para mantener el footer fino */
 }
 
 .footer-list li img {
-  width: 5rem;
-  padding: 0.5rem;
+  width: 3rem; /* 2rem son aprox 32px, un tamaño ideal, sutil y fino */
+  height: 3rem; /* Le agregamos el alto para mantener la proporción */
+  object-fit: contain; /* Evita que la imagen se estire o deforme feo */
+  padding: 0.2rem; /* Un padding mucho más chico para que no empuje el footer hacia abajo */
 }
 
 /*---------------------------------------------------- */
@@ -160,10 +208,18 @@ footer .footer-list {
   gap: 1rem;
 }
 
+.card-description {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0 2rem;
+  line-height: 1.4;
+  opacity: 0.8; /* suaviza la tipo para resaltar más el título */
+}
+
 .card img {
-  width: 50%;
+  width: 70%;
   height: 20rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /*---------------------------------------------------- */
@@ -209,11 +265,48 @@ footer .footer-list {
 }
 
 /*---------------------------------------------------- */
+/*                      CARRITO                        */
+/*---------------------------------------------------- */
+
+.btn-vaciar-carrito {
+  background-color: #ffd900;
+  color: #000000;
+  margin-top: 2rem; /*Le da aire arriba para que no quede pegado a los productos.*/
+  align-self: center; /*Lo centra perfectamente en su espacio con Flexbox en el contenedor.*/
+  padding: 1.2rem 2rem; /*Lo hace más gordito y cómodo para hacer clic.*/
+  font-size: 1.6rem; /*Lo hace más grande y legible.*/
+  border-radius: 0.8rem; /*Le da bordes redondeados para que se vea más moderno y amigable.*/
+  cursor: pointer; /*Le cambia el cursor a una mano para indicar que es clickeable.*/
+}
+
+/*---------------------------------------------------- */
 /*                    MEDIA QUERIES                    */
 /*---------------------------------------------------- */
-@media (max-width: 600px) {
-  header,
-  footer {
+@media (max-width: 768px) {
+  header {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  /* El espacio entre header y .div-logo es para buscar adentro */
+  header .div-logo,
+  .header-nav {
+    margin: 0; /* Quita espacios raros heredados de la compu */
+  }
+
+  footer {
+    display: flex; /* Cambia a Flexbox en celular para apilarlos verticalmente */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  footer p {
+    text-align: center; /* Centra los textos en pantallas chicas */
+    font-size: 1.4rem;
   }
 }

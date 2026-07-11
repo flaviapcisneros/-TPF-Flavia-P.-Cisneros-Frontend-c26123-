@@ -26,6 +26,12 @@
           <li>
             <a href="./pages/contacto.html">Contacto</a>
           </li>
+          <li>
+            <a href="./pages/carrito.html" class="carrito-icono"
+              >🛒<span id="contador-carrito">0</span></a
+            >
+            <!-- entramos a la carpeta carrito a través de pages, definimos la clase,el icono se hace con Win+./ Muestra cuántos productos hay (empieza en 0) y tiene un identificador único para que JavaScript pueda encontrarlo y cambiar el número cuando el usuario agrega o quita productos.-->
+          </li>
         </ul>
       </nav>
     </header>
@@ -45,52 +51,16 @@
 
       <section>
         <h2 class="titulo-productos text-light">Nuestros productos</h2>
-        <div class="contenedor-tarjetas">
-          <article class="card text-secondary">
-            <img src="img/AniMatez_N_Front.webp" alt="N AniMatez" />
-            <h3>N AniMatez</h3>
-            <p>Figura de acción de N coleccionable</p>
-            <p>Precio: $42.300</p>
-            <button class="btn bg-secondary text-dark">
-              Agregar al carrito
-            </button>
-          </article>
-
-          <article class="card text-secondary">
-            <img src="img/AniMatez_Uzi_Front.webp" alt="Uzi AniMatez" />
-            <h3>Uzi AniMatez</h3>
-            <p>Figura de acción de Uzi coleccionable</p>
-            <p>Precio: $42.550</p>
-            <button class="btn bg-secondary text-dark">
-              Agregar al carrito
-            </button>
-          </article>
-
-          <article class="card text-secondary">
-            <img src="img/AniMatez_V_Front.webp" alt="V AniMatez" />
-            <h3>V AniMatez</h3>
-            <p>Figura de acción de V coleccionable</p>
-            <p>Precio: $42.373</p>
-            <button class="btn bg-secondary text-dark">
-              Agregar al carrito
-            </button>
-          </article>
-
-          <article class="card text-secondary">
-            <img src="img/Jacket_Copper_Front.webp" alt="Jacket Copper" />
-            <h3>Campera Americana</h3>
-            <p>Campera universitaria de corte oversize</p>
-            <p>Precio: $42.373</p>
-            <button class="btn bg-secondary text-dark">
-              Agregar al carrito
-            </button>
-          </article>
+        <!--agregamos un ID al div, para acceder al contenedor tarjetas por el ID y meter todas las tarjetas de producto-->
+        <div id="contenedor-tarjetas" class="contenedor-tarjetas">
+          <!--renderizado de tarjetas-->
         </div>
       </section>
     </main>
 
     <footer>
-      <p>Sitio realizado por Fla para Talento Tech</p>
+      <p>Sitio realizado por Fla para Talento Tech y mi fotocopia de 9 años</p>
+      <p>&copy; 2026 Mi E-Commerce</p>
       <nav>
         <ul class="footer-list">
           <li><img src="./img/instagram.png" alt="logo de instagram" /></li>
@@ -98,5 +68,7 @@
         </ul>
       </nav>
     </footer>
+    <!--agregamos el enlace al archivo de js (index): sin type module no funciona porque trabajamos en modulos, siempre antes del cierre del body -->
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>
