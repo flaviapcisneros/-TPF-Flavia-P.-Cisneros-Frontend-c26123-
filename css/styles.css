@@ -217,7 +217,7 @@ footer .footer-list {
 }
 
 .card img {
-  width: 70%; /* Ajusta el ancho de la imagen al 70% del contenedor de la tarjeta */
+  width: 50%; /* Ajusta el ancho de la imagen al 70% del contenedor de la tarjeta */
   height: 20rem; /* Ajusta la altura de la imagen a 20rem */
   object-fit: contain; /* Mantiene la proporción de la imagen y evita que se deforme */
 }
