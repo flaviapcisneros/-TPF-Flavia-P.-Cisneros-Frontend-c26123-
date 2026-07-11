@@ -95,7 +95,7 @@ header {
 }
 
 .logo img {
-  width: 25rem; /* Ajusta el tamaño del logo según tus necesidades */
+  width: 20rem; /* Ajusta el tamaño del logo según tus necesidades */
   height: auto; /* Mantiene la proporción de la imagen */
   padding: 1rem; /* Agrega un poco de espacio alrededor de la imagen */
   display: block; /* Asegura que la imagen se comporte como un bloque y no tenga espacio debajo */
