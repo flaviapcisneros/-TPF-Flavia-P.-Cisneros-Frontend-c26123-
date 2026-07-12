@@ -1,5 +1,5 @@
 //el index se encarga de renderizar las tarjetas de los productos, se ocupa de interactuar con el dom traer el ID que necesitemos traer como caja, crear las partes e introducir los datos y plasmarlo en el DOM
-// importo los productos y las funciones para enviar objetos al array
+//importo los productos y las funciones para enviar objetos al array
 //Funciones que envian objetos al array y lo guardan en el local storage, las funciones que actualizan el contador y muestran mensajes
 import { agregarAlCarrito } from "./funcionesCarrito.js";
 import { obtenerCarrito } from "./storage.js";
@@ -49,7 +49,7 @@ const renderizarProductos = () => {
         tarjeta.appendChild(precio);
         tarjeta.appendChild(boton);
 
-        contenedor.appendChild(tarjeta); //agregamos las tarjetas al DOM
+        contenedor.appendChild(tarjeta); //agregamos las tarjetas al DOM (div)
       }),
     )
     .catch((error) => console.log(error));

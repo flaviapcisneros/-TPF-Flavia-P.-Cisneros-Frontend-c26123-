@@ -36,7 +36,7 @@ const renderizarCarrito = () => {
 
     const descripcion = document.createElement("p"); //le ordena al navegador que cree una nueva etiqueta de párrafo
     descripcion.classList.add("card-description"); //le agregamos el estilo de Css
-    descripcion.textContent = producto.descripcion;
+    descripcion.textContent = producto.descripcion; //le agregamos el texto al párrafo
 
     const precio = document.createElement("p");
     precio.textContent = `$${producto.precio.toLocaleString("es-AR")}`; //el primer $ es el que se ve y el 2do es el de la variable

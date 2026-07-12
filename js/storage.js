@@ -1,4 +1,4 @@
-//El storage se usa para pedir info, guardar o borrar elementos del carrito
+//El storage se usa para pedir info, guardar o borrar elementos del carrito, unifica las funciones de persistencia en el local storage, para que no se repita el código en cada archivo y se pueda reutilizar
 // el uso de mayuscula es porque son variables de configuracion hacemos la variable, porque se reutiliza
 // para guardar un carrito e interactuar con el localStorage : se supone que los dato que vengan de los productos que voy a meter en el array con las funciones lo mando al local Storage
 //necesito un paramtro para abrir la puerta a la función

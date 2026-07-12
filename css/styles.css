@@ -126,7 +126,7 @@ footer nav {
 footer p {
   grid-column: 1; /* Van a la columna 1 */
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   justify-self: start; /*👈 ESTO MANDA EL BLOQUE A LA izquierda*/
   text-align: left; /* Alinea los renglones sobre la izquierda */
 }
@@ -256,7 +256,7 @@ footer .footer-list {
   padding: 1.2rem;
   border-radius: 0.8rem;
   border: none;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-family: inherit;
 }
 
@@ -277,6 +277,17 @@ footer .footer-list {
   font-size: 1.6rem; /*Lo hace más grande y legible.*/
   border-radius: 0.8rem; /*Le da bordes redondeados para que se vea más moderno y amigable.*/
   cursor: pointer; /*Le cambia el cursor a una mano para indicar que es clickeable.*/
+}
+
+.mensaje-carrito-vacio {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem; /*Le da aire arriba para que no quede pegado a otros elementos.*/
+  color: #ffd900; /*Le da un color amarillo para que resalte y sea más visible.*/
+}
+
+.acciones-carrito {
+  margin-top: 2rem; /*Le da aire arriba para que no quede pegado a otros elementos.*/
 }
 
 /*---------------------------------------------------- */
@@ -307,6 +318,6 @@ footer .footer-list {
 
   footer p {
     text-align: center; /* Centra los textos en pantallas chicas */
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 }
