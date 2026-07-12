@@ -268,6 +268,11 @@ footer .footer-list {
 /*                      CARRITO                        */
 /*---------------------------------------------------- */
 
+.mi-boton-personalizado {
+  color: #000000 !important;
+  font-weight: bold; /* Opcional: para que resalte más */
+}
+
 .btn-vaciar-carrito {
   background-color: #ffd900;
   color: #000000;
