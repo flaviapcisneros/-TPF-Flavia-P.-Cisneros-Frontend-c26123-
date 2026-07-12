@@ -1,6 +1,10 @@
 //importo las funciones que actualizan el carrito y el contador, las funciones que eliminan productos y vacían el carrito
 import { obtenerCarrito } from "./storage.js";
-import { eliminarProducto, vaciarCarrito } from "./funcionesCarrito.js";
+import {
+  eliminarProducto,
+  vaciarCarrito,
+  calcularTotal,
+} from "./funcionesCarrito.js";
 import { actualizarContador } from "./ui.js";
 
 // Función para renderizar el carrito de compras
@@ -10,9 +14,18 @@ const renderizarCarrito = () => {
 
   const contenedor = document.getElementById("contenedor-carrito"); //agarramos el div donde vamos a renderizar el carrito
   const divAcciones = document.getElementById("acciones-carrito"); //agarramos el div donde vamos a renderizar los botones de acciones
+  const contenedorResumen = document.getElementById("resumen-carrito"); //agarramos el div donde vamos a renderizar el resumen del carrito
 
   contenedor.innerHTML = ""; //limpio el contenedor para que no se dupliquen los productos al renderizar
   divAcciones.innerHTML = ""; //limpio el contenedor de acciones para que no se dupliquen los botones al renderizar
+  contenedorResumen.innerHTML = ""; //limpio el contenedor de resumen para que no se dupliquen los productos al renderizar
+
+  const renderizarResumen = (carrito) => {
+    if (carrito.length === 0) return; // Si está vacío, no hace nada más, pero como ya limpiamos arriba, el total desaparece.
+    const total = calcularTotal(carrito);
+    contenedorResumen.innerHTML = `<p>Total: $${total.toLocaleString("es-AR")}</p>`;
+  };
+  renderizarResumen(carrito); //llamo a la funcion renderizarResumen antes del if para que maneje el vacio del carrito y muestre el total, si el carrito está vacío no hace falta seguir ejecutando la función, esta vacio porque no hay productos, no hace falta renderizar nada más, cierra la funcion
 
   if (!carrito.length) {
     const mensaje = document.createElement("p");
@@ -77,5 +90,6 @@ const renderizarCarrito = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  //acceder al DOM y cuando se cargue el DOM se ejecute la funcion renderizarCarrito
   renderizarCarrito();
 });

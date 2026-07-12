@@ -295,6 +295,14 @@ footer .footer-list {
   margin-top: 2rem; /*Le da aire arriba para que no quede pegado a otros elementos.*/
 }
 
+.resumen-carrito {
+  margin-top: 2rem; /*Le da aire arriba para que no quede pegado a otros elementos.*/
+  font-size: 1.8rem; /*Hace que el texto sea más grande y legible.*/
+  font-weight: bold; /*Hace que el texto sea más destacado y fácil de leer.*/
+  text-align: center; /*Centra el texto dentro del contenedor.*/
+  color: #ffd900; /*Le da un color amarillo para que resalte y sea más visible.*/
+}
+
 /*---------------------------------------------------- */
 /*                    MEDIA QUERIES                    */
 /*---------------------------------------------------- */

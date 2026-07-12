@@ -37,3 +37,11 @@ export const vaciarCarrito = () => {
   actualizarContador([]);
   mostrarMensaje("Todos los productos fueron eliminados 🗑");
 };
+
+export const calcularTotal = (carrito) => {
+  //la dejo exportada para poder usarla en el futuro aunque la funcion de renderizar carrito este en este archivo, la dejo aca porque es una funcion que hace calculos y no tiene que ver con el renderizado de la interfaz
+  return carrito.reduce(
+    (acumulador, producto) => acumulador + producto.precio,
+    0,
+  );
+};
